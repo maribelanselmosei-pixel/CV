@@ -1,34 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi CV - Maribel </title>
-<style>
-body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-h1 { color: #2c3e50; }
-h2 { color: #34495e; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title> Maribel Anselmo]</title>
+  <meta name="description" content="Currículum vitae en línea de [TU NOMBRE] — Profesional en automatización, instrumentación y minería.">
+  <style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --radius:10px;
+      --shadow:0 25px 50px -12px rgba(0,0,0,0.15);
+      --primary:#4f46e5;
+      --text:#1f2d3d;
+      --muted:#6b7a94;
+      --border:rgba(0,0,0,0.05);
+      font-family: "Inter", system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      background: linear-gradient(135deg,#eef2f7 0%,#d7e3f0 100%);
+      color: var(--text);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color: var(--primary); text-decoration:none;}
+    .container{
+      max-width: 1000px;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+    }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      padding:1.75rem 2rem;
+      box-shadow: var(--shadow);
+      margin-bottom:2rem;
+    }
+    .flex{display:flex; gap:1.5rem; flex-wrap:wrap;}
+    .avatar{
+      flex:0 0 120px;
+      width:120px; height:120px;
+      border-radius:50%;
+      background:#e2e8f0;
+      position: relative;
+      overflow:hidden;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:48px;
+      color:#555;
+    }
+    .avatar img{
+      width:100%; height:100%; object-fit:cover; display:block;
+    }
+    h1{margin:0;font-size:2rem;}
+    h2{
+      margin-top:0;
+      font-size:1.1rem;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:600;
+      color: #555;
+    }
+    .subtitle{margin:4px 0 12px;font-weight:500;color: #334167;}
+    .badge{
+      display:inline-block;
+      background: var(--primary);
+      color:#fff;
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:0.6rem;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-right:6px;
+    }
+    .info{font-size:0.9rem; margin:4px 0;}
+    .section{
+      margin-top:1rem;
+    }
+    .skills{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+      gap:8px;
+      margin-top:8px;
+    }
+    .skill{
+      background: rgba(79,70,229,0.1);
+      padding:8px 12px;
+      border-radius:6px;
+      font-size:0.75rem;
+      font-weight:600;
+      display:inline-block;
+    }
+    .item{
+      margin-bottom:1.25rem;
+    }
+    .item-title{
+      display:flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap:6px;
+      margin:0;
+      font-weight:600;
+      font-size:1rem;
+    }
+    .small{
+      font-size:0.8rem;
+      color: var(--muted);
+    }
+    .project-tags{
+      margin-top:6px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+    .tag{
+      background: #eef3ff;
+      padding:4px 10px;
+      border-radius:6px;
+      font-size:0.65rem;
+      font-weight:500;
+      color: #4f46e5;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap:12px;
+      margin-top:6px;
+    }
+    .button{
+      display:inline-block;
+      background: var(--primary);
+      color:#fff;
+      padding:10px 18px;
+      border-radius:8px;
+      font-weight:600;
+      font-size:0.9rem;
+      text-decoration:none;
+    }
+    .divider{
+      height:1px;
+      background: var(--border);
+      margin:2rem 0;
+    }
+    footer{
+      text-align:center;
+      font-size:0.75rem;
+      color: var(--muted);
+      margin:3rem 0 1rem;
+    }
+    @media (max-width:900px){
+      .flex{flex-direction:column;}
+      .avatar{margin-bottom:6px;}
+    }
+  </style>
 </head>
 <body>
-<h1> Maribel A. </h1>
-<p>Email: Maribel@email.com | Tel: +52 6625000000</p>
-<h2>Perfil</h2>
-<p>Profesional con experiencia en TODOOOOO. </p>
-<h2>Experiencia</h2>
-<ul>
-<li><strong>Puesto</strong> - Empresa (2019 - 2020) <br> empresa im</li>
-<li><strong>Puesto</strong> - Empresa (2022 - 2025) <br> empresa hm</li>
-</ul>
-<h2>Educación</h2>
-<ul>
-<li> ITN (2019)</li>
-</ul>
-<h2>Habilidades</h2>
-<ul>
-<li>Habilidad 1</li>
-<li>Habilidad 2</li>
-<li>Habilidad 3</li>
-</ul>
+  <div class="container">
+    <!-- Encabezado -->
+    <div class="card flex" aria-label="Encabezado del CV">
+      <div style="flex:1; min-width:220px;">
+        <div class="badge">Ingeniero de Automatización</div>
+        <h1>[TU NOMBRE]</h1>
+        <p class="subtitle">Especialista en Instrumentación &amp; Proyectos Mineros</p>
+        <div class="info">
+          📍 Ciudad, País<br />
+          ✉ <a href="mailto:tu@email.com">tu@email.com</a> · 📞 +52 1 55 1234 5678
+        </div>
+        <div class="info">
+          🔗 <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">linkedin.com/in/tuusuario</a> · 🌐 <a href="#">sitio personal (opcional)</a>
+        </div>
+        <p style="margin-top:10px;">
+          <a class="button" href="mailto:tu@email.com?subject=Contacto%20desde%20CV">Contactar</a>
+        </p>
+      </div>
+      <div style="flex:0 0 120px; display:flex; justify-content:center; align-items:start;">
+        <div class="avatar" aria-label="Foto de perfil">
+          <!-- Sustituye con tu imagen real: -->
+          <!-- <img src="foto.jpg" alt="[TU NOMBRE]"> -->
+          <span style="font-size:32px;">TN</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perfil / Resumen -->
+    <div class="card" aria-label="Perfil profesional">
+      <h2>Perfil profesional</h2>
+      <p class="info">
+        Ingeniero con amplia experiencia en automatización industrial, instrumentación y control para el sector minero. Diseño y ejecución de proyectos llave en mano, optimización de procesos, mantenimiento predictivo y soluciones de control robustas que reducen tiempos muertos y mejoran la eficiencia operativa.
+      </p>
+    </div>
+
+    <!-- Experiencia -->
+    <div class="card" aria-label="Experiencia laboral">
+      <h2>Experiencia</h2>
+
+      <div class="item">
+        <p class="item-title">
+          <span>Ingeniero de Automatización – Empresa Minera XYZ</span>
+          <span class="small">2022 - Presente</span>
+        </p>
+        <p class="small">Monterrey, México</p>
+        <p>
+          Lideré la implementación de sistemas de control PLC y SCADA en planta de procesamiento, logrando una reducción de paradas no planificadas del 25% y mejora de eficiencia del 17%.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Rockwell</span>
+          <span class="tag">SCADA</span>
+          <span class="tag">Optimización</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="item-title">
+          <span>Diseñador de Gabinetes de Control – Constructora Industrial ABC</span>
+          <span class="small">2020 - 2022</span>
+        </p>
+        <p class="small">Chihuahua, México</p>
+        <p>
+          Diseño y montaje de gabinetes eléctricos cumpliendo normas IEC; se redujeron fallas eléctricas en un 40% mediante mejoras estructurales y diagramación inteligente.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Normas IEC</span>
+          <span class="tag">Diseño Eléctrico</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educación + Habilidades -->
+    <div class="flex">
+      <div class="card" style="flex:1; min-width:280px;" aria-label="Educación">
+        <h2>Educación</h2>
+        <div class="item">
+          <p class="item-title">
+            <span>Ingeniería en Automatización</span>
+            <span class="small">2015 - 2019</span>
+          </p>
+          <p class="small">Universidad Tecnológica de [Nombre]</p>
+        </div>
+      </div>
+      <div class="card" style="flex:1; min-width:280px;" aria-label="Habilidades">
+        <h2>Habilidades</h2>
+        <div class="skills">
+          <div class="skill">PLC Rockwell</div>
+          <div class="skill">Siemens S7</div>
+          <div class="skill">SCADA / HMI</div>
+          <div class="skill">Instrumentación</div>
+          <div class="skill">Gestión de Proyectos</div>
+          <div class="skill">Mantenimiento Predictivo</div>
+          <div class="skill">Normas de Seguridad</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyectos / Extras -->
+    <div class="card" aria-label="Proyectos destacados">
+      <h2>Proyectos destacados</h2>
+      <div class="item">
+        <p class="item-title">
+          <span>Automatización de Planta de Lixiviación</span>
+          <span class="small">2023</span>
+        </p>
+        <p class="small">Cliente: Compañía Minera Z</p>
+        <p>
+          Implementación integral de sistema de control con monitoreo remoto, integración de sensores IoT y tablero de supervisión en tiempo real que permitió anticipar fallas y recuperar un 12% de capacidad operativa.
+        </p>
+      </div>
+      <div class="item">
+        <p class="item-title">
+          <span>Estrategia de Mantenimiento Predictivo</span>
+          <span class="small">2022</span>
+        </p>
+        <p class="small">Cliente: Planta de Bombeo ABC</p>
+        <p>
+          Diseño e implementación de plataforma de monitoreo de vibraciones y temperatura, reduciendo fallas críticas en bombas en un 35%.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contacto final -->
+    <div class="card" id="contacto" aria-label="Contacto">
+      <h2>Contacto</h2>
+      <p class="info">
+        Estoy disponible para proyectos, consultorías o colaboraciones. Puedes escribirme directamente.
+      </p>
+      <div class="contact-grid">
+        <div><strong>Email:</strong> <a href="mailto:tu@email.com">tu@email.com</a></div>
+        <div><strong>Teléfono:</strong> +52 1 55 1234 5678</div>
+        <div><strong>LinkedIn:</strong> <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">linkedin.com/in/tuusuario</a></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer>
+      © <span id="year"></span> [TU NOMBRE]. Sitio publicado con GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
